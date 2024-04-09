@@ -58,7 +58,6 @@ Rolling pod annotations
 {{- if .Values.revisionPodAnnotation }}
 rollme: {{ .Release.Revision | quote }}
 {{- end }}
-checksum/config-configmap: {{ include ( print $.Template.BasePath "/configmap-env.yaml" ) . | sha256sum | quote }}
 {{- end }}
 
 {{/*
